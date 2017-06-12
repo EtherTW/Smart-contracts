@@ -14,7 +14,7 @@ contract Vote is ERC20, SafeMath{
 	uint8 public decimals;
 
 	function Vote(){
-		initialSupply = 10000;
+		initialSupply = 100000;
 		totalSupply = initialSupply;
 		balances[msg.sender] = initialSupply;
 		name = "EthTaipei Logo Vote";

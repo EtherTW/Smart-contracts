@@ -37,16 +37,20 @@ contract LogoVote is Pausable, SafeMath{
 	function LogoVote() {
 		vote = new Vote();
 		faucet = new Faucet(vote);
-		votePerETH = 10; // donate 0.1 ether to get 1 vote 
+		votePerETH = 1000; // donate 0.001 ether to get 1 vote 
 		totalReward = 0;
 		startBlock = block.number;
-		endBlock = startBlock + ( 20 * 24 * 60 * 60 / 15 ); //end in 20 days
+		endBlock = startBlock + ( 30 * 24 * 60 * 60 / 15 ); //end in 30 days
 		rewardClaimed = 0;
 		rewardClaimed = 0;
 	}
 
 	function sendToFaucet(uint _amount) onlyOwner {
 		if(!vote.transfer(faucet, _amount)) throw;
+	}
+
+	function sendVote(address _to, uint _amout) onlyOwner afterEnf {
+		if(!vote.transfer(_to, _amount)) throw;
 	}
 
 	function registLogo(address _owner, address _author, string _metadatUrl) 
