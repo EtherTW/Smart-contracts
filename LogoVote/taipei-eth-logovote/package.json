@@ -4,8 +4,8 @@
   "description": "Taipei Ethereum LogoVote",
   "license": "GPL-3.0",
   "devDependencies": {
-    "ethereumjs-testrpc": "^3.0.2",
-    "truffle": "^3.2.4"
+    "ethereumjs-testrpc": "^3.9.2",
+    "truffle": "^3.2.93"
   },
   "dependencies": {
     "truffle-hdwallet-provider": "0.0.3"
